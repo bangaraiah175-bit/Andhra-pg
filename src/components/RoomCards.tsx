@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { ROOMS_DATA, PG_INFO } from '../data/pgData';
 import { RoomType, StayTier } from '../types';
+import { handleImageError } from '../utils/imageFallback';
 
 interface RoomCardsProps {
   onContactPricing: (room: RoomType) => void;
@@ -190,9 +191,7 @@ export const RoomCards: React.FC<RoomCardsProps> = ({ onContactPricing }) => {
                   <img
                     src={room.images[currentImgIndex]}
                     alt={room.name}
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
-                    }}
+                    onError={(e) => handleImageError(e, '/budget-pg/1.webp')}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
 

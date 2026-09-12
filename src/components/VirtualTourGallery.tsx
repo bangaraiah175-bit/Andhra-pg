@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Maximize2, X, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
 import { GALLERY_ITEMS } from '../data/pgData';
+import { handleImageError } from '../utils/imageFallback';
 
 export const VirtualTourGallery: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
@@ -74,9 +75,7 @@ export const VirtualTourGallery: React.FC = () => {
               <img
                 src={item.url}
                 alt={item.title}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
-                }}
+                onError={(e) => handleImageError(e, '/budget-pg/1.webp')}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
 
@@ -133,9 +132,7 @@ export const VirtualTourGallery: React.FC = () => {
               <img
                 src={filteredItems[lightboxIndex].url}
                 alt={filteredItems[lightboxIndex].title}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
-                }}
+                onError={(e) => handleImageError(e, '/budget-pg/1.webp')}
                 className="w-full h-full object-contain"
               />
 

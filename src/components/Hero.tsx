@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Utensils, Wifi, ChevronRight, Bed, Star } from 'lucide-react';
 import { PG_INFO } from '../data/pgData';
+import { handleImageError } from '../utils/imageFallback';
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -112,9 +113,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 <img
                   src="/premium-1.jpg"
                   alt="Real Andhra Prince PG Master Bedroom"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
-                  }}
+                  onError={(e) => handleImageError(e, '/budget-pg/1.webp')}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-3 left-3 bg-[#722F37] text-white text-[11px] font-black uppercase px-3 py-1 rounded-full shadow-md">
@@ -132,9 +131,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                   <img
                     src="/premium-2.jpg"
                     alt="Premium PG Room 2"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/budget-pg/2.webp';
-                    }}
+                    onError={(e) => handleImageError(e, '/budget-pg/2.webp')}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -142,9 +139,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                   <img
                     src="/premium-3.jpeg"
                     alt="Premium PG Room 3"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/budget-pg/3.webp';
-                    }}
+                    onError={(e) => handleImageError(e, '/budget-pg/3.webp')}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -152,9 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                   <img
                     src="/premium-4.jpeg"
                     alt="Premium PG Room 4"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/budget-pg/4.webp';
-                    }}
+                    onError={(e) => handleImageError(e, '/budget-pg/4.webp')}
                     className="w-full h-full object-cover"
                   />
                 </div>

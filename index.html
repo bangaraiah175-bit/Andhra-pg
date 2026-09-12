@@ -12,12 +12,30 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Classic typography: Helvetica Neue / Helvetica font stack with classic serif accents -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
   </head>
-  <body class="font-sans antialiased text-stone-900 bg-white selection:bg-[#722F37] selection:text-white">
-    <div id="root"></div>
+  <body class="font-sans antialiased text-stone-900 bg-[#FAF7F5] selection:bg-[#722F37] selection:text-white">
+    <div id="root">
+      <!-- Instant Visual Pre-mount Shell: Prevents blank white screen while React & Vite scripts initialize -->
+      <div id="app-preloader" style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #FAF7F5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1c1917; padding: 24px; text-align: center; box-sizing: border-box;">
+        <div style="width: 80px; height: 80px; border-radius: 20px; background-color: #722F37; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(114,47,55,0.25);">
+          <img src="/ap-logo.png" alt="Andhra Prince PG" style="width: 54px; height: 54px; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span style="display: none; color: #ffffff; font-weight: 900; font-size: 26px; letter-spacing: -1px;">AP</span>
+        </div>
+        <h1 style="font-size: 26px; font-weight: 900; margin: 0 0 6px 0; color: #0c0a09; letter-spacing: -0.5px;">Andhra Prince PG</h1>
+        <p style="font-size: 13px; color: #722F37; font-weight: 700; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 0.5px;">Sector 126, Raipur Khadar, Noida (Near Amity University)</p>
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: #78716c; background-color: #ffffff; padding: 8px 18px; border-radius: 9999px; border: 1px solid #e7e5e4; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+          <div style="width: 14px; height: 14px; border: 2.5px solid #722F37; border-top-color: transparent; border-radius: 50%; animation: ap-spin 0.8s linear infinite;"></div>
+          <span>Loading verified rooms &amp; amenities...</span>
+        </div>
+        <style>
+          @keyframes ap-spin { to { transform: rotate(360deg); } }
+        </style>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
