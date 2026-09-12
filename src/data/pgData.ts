@@ -37,9 +37,9 @@ export const ROOMS_DATA: RoomType[] = [
     hasAC: true,
     badge: '👑 Executive Luxury',
     images: [
-      '/premium 1.jpg',
-      '/premium 2.jpg',
-      '/premium 3.jpeg'
+      '/premium-1.jpg',
+      '/premium-2.jpg',
+      '/premium-3.jpeg'
     ],
     features: [
       '100% Private Room (Zero Roommates)',
@@ -67,9 +67,9 @@ export const ROOMS_DATA: RoomType[] = [
     hasAC: true,
     badge: '⭐ Premium Twin',
     images: [
-      '/premium 4.jpeg',
-      '/premium 5.jpeg',
-      '/premium 6.jpeg'
+      '/premium-4.jpeg',
+      '/premium-5.jpeg',
+      '/premium-6.jpeg'
     ],
     features: [
       '2 Separate Solid-Wood Beds with Ortho Mattresses',
@@ -282,36 +282,36 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: '8',
     title: 'Premium Executive Master Bedroom',
     category: 'Premium Stay',
-    url: '/premium 1.jpg'
+    url: '/premium-1.jpg'
   },
   {
     id: '9',
     title: 'Premium Executive Bedroom Setup',
     category: 'Premium Stay',
-    url: '/premium 2.jpg'
+    url: '/premium-2.jpg'
   },
   {
     id: '10',
     title: 'Premium Suite Room Interior',
     category: 'Premium Stay',
-    url: '/premium 3.jpeg'
+    url: '/premium-3.jpeg'
   },
   {
     id: '11',
     title: 'Premium Twin Sharing Bedroom',
     category: 'Premium Stay',
-    url: '/premium 4.jpeg'
+    url: '/premium-4.jpeg'
   },
   {
     id: '12',
     title: 'Premium Deluxe Living Room',
     category: 'Premium Stay',
-    url: '/premium 5.jpeg'
+    url: '/premium-5.jpeg'
   },
   {
     id: '13',
     title: 'Premium Executive Suite',
     category: 'Premium Stay',
-    url: '/premium 6.jpeg'
+    url: '/premium-6.jpeg'
   }
 ];

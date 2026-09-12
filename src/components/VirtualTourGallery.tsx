@@ -74,6 +74,9 @@ export const VirtualTourGallery: React.FC = () => {
               <img
                 src={item.url}
                 alt={item.title}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
+                }}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
 
@@ -130,6 +133,9 @@ export const VirtualTourGallery: React.FC = () => {
               <img
                 src={filteredItems[lightboxIndex].url}
                 alt={filteredItems[lightboxIndex].title}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
+                }}
                 className="w-full h-full object-contain"
               />
 

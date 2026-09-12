@@ -110,8 +110,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             <div className="relative bg-white p-3 rounded-3xl border border-stone-200 shadow-xl shadow-stone-300/40 group">
               <div className="relative h-80 rounded-2xl overflow-hidden bg-stone-100">
                 <img
-                  src="/premium 1.jpg"
+                  src="/premium-1.jpg"
                   alt="Real Andhra Prince PG Master Bedroom"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
+                  }}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-3 left-3 bg-[#722F37] text-white text-[11px] font-black uppercase px-3 py-1 rounded-full shadow-md">
@@ -126,13 +129,34 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               {/* Thumbnails row */}
               <div className="grid grid-cols-3 gap-2 mt-2.5">
                 <div className="h-16 rounded-xl overflow-hidden border border-stone-200">
-                  <img src="/premium 2.jpg" alt="Premium PG Room 2" className="w-full h-full object-cover" />
+                  <img
+                    src="/premium-2.jpg"
+                    alt="Premium PG Room 2"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/budget-pg/2.webp';
+                    }}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="h-16 rounded-xl overflow-hidden border border-stone-200">
-                  <img src="/premium 3.jpeg" alt="Premium PG Room 3" className="w-full h-full object-cover" />
+                  <img
+                    src="/premium-3.jpeg"
+                    alt="Premium PG Room 3"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/budget-pg/3.webp';
+                    }}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="h-16 rounded-xl overflow-hidden border border-stone-200">
-                  <img src="/premium 4.jpeg" alt="Premium PG Room 4" className="w-full h-full object-cover" />
+                  <img
+                    src="/premium-4.jpeg"
+                    alt="Premium PG Room 4"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/budget-pg/4.webp';
+                    }}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>

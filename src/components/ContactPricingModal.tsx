@@ -103,6 +103,9 @@ export const ContactPricingModal: React.FC<ContactPricingModalProps> = ({ room, 
                 <img
                   src={room.images[0]}
                   alt={room.name}
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
+                  }}
                   className="w-16 h-16 rounded-xl object-cover"
                 />
                 <div className="space-y-0.5">

@@ -190,6 +190,9 @@ export const RoomCards: React.FC<RoomCardsProps> = ({ onContactPricing }) => {
                   <img
                     src={room.images[currentImgIndex]}
                     alt={room.name}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/budget-pg/1.webp';
+                    }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
 
