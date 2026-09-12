@@ -1,0 +1,6 @@
+{
+  "name": "Andhra Prince PG - Luxury Co-Living & Homely Stay",
+  "description": "Premium luxury paying guest accommodation in Sector 126, Raipur Khadar, Noida (near Amity University) with authentic Andhra homely food, high-speed WiFi, 24/7 power backup, AC rooms, and modern amenities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
